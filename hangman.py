@@ -14,9 +14,8 @@ def menu():
     word = random.choice(wordDict[theme])
     return word
     
-
+#Prints the word to guess
 def printBoard(word, lettersGuessed):
-    #prints the word and the hangman
     print("The word to guess is: ")
     output = ""
     for x in word:
@@ -27,7 +26,8 @@ def printBoard(word, lettersGuessed):
         else:
             output+= "_"
     print(output)
-    
+
+#Prints the board based on the current number of incorrect guesses
 def buildHangman(lettersMissed):
     if len(lettersMissed) == 0:
         print(" -----------")
